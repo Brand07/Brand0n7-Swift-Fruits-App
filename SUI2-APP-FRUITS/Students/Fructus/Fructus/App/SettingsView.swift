@@ -25,7 +25,7 @@ struct SettingsView: View {
                         label:
                             SettingsLabelView(labelText: "Fructus", labelImage: "info.circle")
                     ) {
-                        Divider().padding(.vertical, 4)
+                        
                         
                         HStack(alignment: .center, spacing: 10) {
                             Image("logo")
@@ -44,11 +44,13 @@ struct SettingsView: View {
                     //MARK: - SECTION 3
                     
                     GroupBox(label: SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")) {
-                        Divider().padding(.vertical, 4)
-                        HStack {
-                            Text("Developer").foregroundColor(.gray)
-                            Spacer()
-                            Text("Brandon")
+                        SettingsRowView(name: "Developer", content: "Brandon")
+                        SettingsRowView(name: "Designer", content: "Brandon ")
+                        SettingsRowView(name: "Compatibility", content: "iOS 17")
+                        SettingsRowView(name:"Website",linkLabel:"GitHub",linkDestination:"github.com/Brand07")
+                        SettingsRowView(name: "SwiftUI", content: "2.0")
+                        SettingsRowView(name: "Version", content: "1.1.0")
+                        
                         
                     }
                     
@@ -70,7 +72,6 @@ struct SettingsView: View {
         }//END OF NAV
         
     }
-}
 
 #Preview {
     SettingsView()
